@@ -1,0 +1,234 @@
+/* ===== Fonts (Google Font: Poppins) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ===== Color Theme ===== */
+:root {
+  --primary: #0047ab;     /* blue  - header, buttons, table */
+  --primary-dark: #003380;/* hover */
+  --bg: #f4f4f4;         /* light grey page background */
+  --text: #222222;       /* main text */
+}
+
+/* ===== Global / Reset Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;          /* smooth scrolling */
+  scroll-padding-top: 90px;         /* keeps headings visible under sticky header */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+  position: sticky;                 /* sticky header */
+  top: 0;
+  z-index: 100;
+  background-color: var(--primary);
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+nav a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;            /* remove underline */
+  padding: 4px 10px;
+  margin: 2px 4px;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: var(--primary);
+}
+
+/* ===== Sections (Box Model) ===== */
+section {
+  padding: 30px 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* ===== About Section ===== */
+.profile-img {
+  display: block;
+  margin: 0 auto 18px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  /* image shadow */
+}
+
+/* ===== Visual Separators ===== */
+hr {
+  border: none;
+  border-top: 1px solid #888888;
+  max-width: 100%;
+}
+
+/* ===== Skills Table ===== */
+.skills-table {
+  margin: 0 auto;                   /* center the table */
+  width: 100%;
+  max-width: 560px;
+  border-collapse: collapse;
+  border: 1px solid var(--primary);
+}
+
+.skills-table th,
+.skills-table td {
+  border: 1px solid var(--primary);
+  padding: 10px;
+  text-align: center;
+}
+
+.skills-table th {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.skills-table tbody tr:nth-child(even) {
+  background-color: #e6edf8;        /* alternating row color */
+}
+
+.skills-table tbody tr:hover {
+  background-color: #cfdcf2;
+}
+
+/* ===== Projects ===== */
+.project-card {
+  background-color: #ffffff;
+  max-width: 560px;
+  margin: 0 auto 12px;
+  padding: 16px;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* ===== Contact Form ===== */
+.form-table {
+  margin: 0 auto;                   /* center the form */
+  width: 100%;
+  max-width: 560px;
+  border-collapse: collapse;
+  border: 1px solid var(--primary);
+}
+
+.form-table td {
+  border: 1px solid var(--primary);
+  padding: 10px;
+  text-align: center;
+}
+
+.form-table label {
+  font-size: 13px;
+}
+
+.form-table input,
+.form-table textarea {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #555555;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.form-table input:focus,
+.form-table textarea:focus {
+  outline: 2px solid var(--primary);
+}
+
+/* ===== Buttons ===== */
+button {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 40px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* ===== Back to Top Button (position: fixed) ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-to-top:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--primary);
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+}
+
+/* ===== Responsive (small screens) ===== */
+@media (max-width: 600px) {
+  header h1 { font-size: 20px; }
+  section { padding: 24px 12px; }
+  .back-to-top { bottom: 15px; right: 15px; }
+}
